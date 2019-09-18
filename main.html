@@ -9,6 +9,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Dog Calculator</title>
+    <link rel="icon" href="dogicon.png">
+
 
     <script>
         //function that displays value in bar
@@ -82,7 +84,7 @@
                 <td><input class="btn btn-dark" type="button" value="0" onclick="dis('0')" /> </td>
                 <td><input class="btn btn-dark" type="button" value="C" onclick="clr()"> </td>
 
-                <td><input class="btn btn-dark" onclick="solve()" , onclick="document.getElementById('sound1').play();"
+                <td><input class="btn btn-dark" onclick="solve();document.getElementById('sound1').play();" 
                         type="button" value="🐶" /> </td>
                 <audio id="sound1" src="dogbark.mp3" preload="auto"></audio>
 
