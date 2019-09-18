@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Dog Calculator</title>
+
+    <script>
+        //function that displays value in bar
+        function dis(val) {
+            document.getElementById("result").value += val
+        }
+
+        //function that takes the digit and return result 
+        function solve() {
+            var x = document.getElementById("result").value
+            var z = 7
+            var y = x * z
+
+            document.getElementById("result").value = y
+
+        }
+
+        //function that clears calculator
+        function clr() {
+            document.getElementById("result").value = ""
+        } 
+    </script>
+
+    <style>
+        .calc {
+            margin: 25% 25% 25% 25%;
+            border-style: solid;
+            border-radius: 20px;
+            width:300px;
+            padding-left:50px;
+            background-color:white;
+        }
+
+        .background-img{
+
+            background-image: url("dogif.gif");
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="background-img">
+    <div class="calc">
+
+        <table>
+            <tr>
+                <h4>Dog Year Calculator</h4>
+                <br>
+                <form name="calculator"></form>
+                Enter your age!
+                <td colspan="3"><input type="text" id="result" /></td>
+
+            </tr>
+            <tr>
+                <td><input class="btn btn-dark" type="button" value="1" onclick="dis('1')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="2" onclick="dis('2')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="3" onclick="dis('3')" /> </td>
+            </tr>
+            <tr>
+                <td><input class="btn btn-dark" type="button" value="4" onclick="dis('4')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="5" onclick="dis('5')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="6" onclick="dis('6')" /> </td>
+            </tr>
+            <tr>
+                <td><input class="btn btn-dark" type="button" value="7" onclick="dis('7')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="8" onclick="dis('8')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="9" onclick="dis('9')" /> </td>
+            </tr>
+            <tr>
+                <td><input class="btn btn-dark" type="button" value="0" onclick="dis('0')" /> </td>
+                <td><input class="btn btn-dark" type="button" value="C" onclick="clr()"> </td>
+
+                <td><input class="btn btn-dark" onclick="solve()" , onclick="document.getElementById('sound1').play();"
+                        type="button" value="🐶" /> </td>
+                <audio id="sound1" src="dogbark.mp3" preload="auto"></audio>
+
+            </tr>
+    </div>
+
+
+    </table>
+
+    </label>
+</div>
+</body>
+
+</html>
